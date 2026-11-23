@@ -34,3 +34,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Paid-access signing
+
+Set `UNLOCK_SECRET` to a cryptographically random value of at least 32 characters in every running environment. For example, generate one using `openssl rand -hex 32`. No development or production fallback exists. Existing cookies signed with a previous secret become invalid when it changes; buyers can re-verify their Stripe session through the existing purchase return flow. Keep this value server-side.
